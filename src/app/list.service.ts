@@ -11,7 +11,7 @@ export class ListService {
     "Run away from Death Eaters"
   ];
 
-  lists: [{}] = [{name: "Starter Todo", todos: this.todos}]
+  lists: [{}] = [{name: "Starter Todo", todos: this.todos}, {name: "Second List", todos: ["hello", "todo 2"]}]
 
   getTodos() {
     return this.todos;

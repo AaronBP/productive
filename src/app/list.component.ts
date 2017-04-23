@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { ListService } from './list.service';
 
@@ -9,19 +9,11 @@ import { ListService } from './list.service';
 })
 
 export class ListComponent implements OnInit{
-  // todos = [
-  //   "Meet Hagrid",
-  //   "Learn spells",
-  //   "Write potions assignment",
-  //   "Kill Goblins"
-  // ]
   todos = [];
-
+  @Input() list;
   constructor(private listService: ListService){}
 
   ngOnInit() {
     this.todos = this.listService.getTodos();
-    // this.subscription = this.listService.getEmittedValue()
-    //   .subscribe(item => this.onMain=item);
   }
 }

@@ -1,6 +1,6 @@
 <div class="container">
   <h1>{{title}}</h1>
   <app-todo-input></app-todo-input>
-  <app-list></app-list>
+  <app-list *ngFor="let list of lists" [list]="list"></app-list>
   <app-list-input></app-list-input>
 </div>
