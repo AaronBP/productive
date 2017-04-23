@@ -9,7 +9,9 @@ export class ListService {
     "Write potions assignment",
     "Kill Goblins",
     "Run away from Death Eaters"
-  ]
+  ];
+
+  lists: [{}] = [{name: "Starter Todo", todos: this.todos}]
 
   getTodos() {
     return this.todos;
@@ -17,6 +19,14 @@ export class ListService {
 
   addTodo(todo) {
     this.todos.push(todo);
-    console.log(this.todos)
+  }
+
+  getLists() {
+    return this.lists;
+  }
+
+  addList(list) {
+    this.lists.push(list);
+    console.log(this.lists)
   }
 }
