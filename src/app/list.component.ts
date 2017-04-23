@@ -5,10 +5,10 @@ import { ListService } from './list.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  providers: [ListService]
+  providers: []
 })
 
-export class ListComponent{
+export class ListComponent implements OnInit{
   // todos = [
   //   "Meet Hagrid",
   //   "Learn spells",
@@ -21,5 +21,7 @@ export class ListComponent{
 
   ngOnInit() {
     this.todos = this.listService.getTodos();
+    // this.subscription = this.listService.getEmittedValue()
+    //   .subscribe(item => this.onMain=item);
   }
 }

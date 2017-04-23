@@ -13,7 +13,7 @@ import { ListService } from './list.service';
     </div>
   </form>
   `,
-  providers: [ListService]
+  providers: []
 })
 
 export class TodoInputComponent {
@@ -21,7 +21,7 @@ export class TodoInputComponent {
 
   addTodo(form: NgForm) {
     const value = form.value;
-    console.log('form value: ' + value.todo)
-    // this.listService.addTodo(value.todo);
+    this.listService.addTodo(value.todo);
+    form.reset()
   }
 }
