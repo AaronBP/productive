@@ -14,6 +14,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.lists = this.listService.getLists()
-    console.log(this.lists)
   }
 }

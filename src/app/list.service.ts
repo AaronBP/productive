@@ -11,14 +11,21 @@ export class ListService {
     "Run away from Death Eaters"
   ];
 
-  lists: [{}] = [{name: "Starter Todo", todos: this.todos}, {name: "Second List", todos: ["hello", "todo 2"]}]
+  lists = [{name: "Starter Todo", todos: this.todos}, {name: "Second List", todos: ["hello", "todo 2"]}]
 
   getTodos() {
     return this.todos;
   }
 
-  addTodo(todo) {
-    this.todos.push(todo);
+  addTodo(todo, list) {
+    var list;
+    for(var i=0; i<this.lists.length; i++){
+      if(this.lists[i].name == list){
+        list = this.lists[i];
+        list.todos.push(todo);
+        return
+      }
+    }
   }
 
   getLists() {
