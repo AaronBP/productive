@@ -11,7 +11,7 @@ export class ListService {
     "Run away from Death Eaters"
   ];
 
-  lists = [{name: "Starter Todo", todos: this.todos}, {name: "Second List", todos: ["hello", "todo 2"]}]
+  lists = [{name: "Starter Todo", todos: this.todos}]
 
   getTodos() {
     return this.todos;
@@ -28,12 +28,35 @@ export class ListService {
     }
   }
 
+  editTodo(todo, list, newTodo){
+    for(var i=0; i<this.lists.length; i++){
+      if(this.lists[i].name === list.name){
+        for(var j=0; j<this.lists[i].todos.length; j++){
+          if(this.lists[i].todos[j] === todo){
+            return this.lists[i].todos[j] = newTodo;
+          }
+        }
+      }
+    }
+  }
+
+  deleteTodo(todo, list){
+    for(var i=0; i<this.lists.length; i++){
+      if(this.lists[i].name === list.name){
+        for(var j=0; j<this.lists[i].todos.length; j++) {
+          if(this.lists[i].todos[j] === todo){
+            return this.lists[i].todos.splice(j, 1);
+          }
+        }
+      }
+    }
+  }
+
   getLists() {
     return this.lists;
   }
 
   addList(list) {
     this.lists.push(list);
-    console.log(this.lists)
   }
 }

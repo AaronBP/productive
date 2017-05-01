@@ -7,3 +7,90 @@
 select {
   display: block!important;
 }
+
+body {
+  background: #fafafa
+}
+
+.todo-input-form {
+  margin-top: 50px;
+}
+
+.new-list {
+  background: white;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 12px;
+  margin-bottom: 50px;
+}
+
+.new-list-active.new-list {
+  height: 90px;
+  padding: 7px 12px;
+}
+
+.new-list:hover {
+  background: #f5f5f5;
+  cursor: pointer;
+}
+
+.new-list-active.new-list:hover{
+  background: white;
+  cursor: default;
+}
+
+.todo-input-form input:not([type]),
+.todo-input-form input[type=text],
+.todo-input-form input[type=password],
+.todo-input-form input[type=email],
+.todo-input-form input[type=url],
+.todo-input-form input[type=time],
+.todo-input-form input[type=date],
+.todo-input-form input[type=datetime],
+.todo-input-form input[type=datetime-local],
+.todo-input-form input[type=tel],
+.todo-input-form input[type=number],
+.todo-input-form input[type=search],
+.todo-input-form textarea.materialize-textarea {
+  width: 100%;
+}
+
+.todo-input-form .input-field {
+  width: 48%;
+  display: inline-block;
+}
+
+.todo-input-form .todo-input-wrap {
+  background: white;
+  height: 90px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #e0e0e0;
+  border-bottom: 2px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 10px 12px;
+}
+
+.todo-action {
+  float:right;
+  width: 100px;
+  display: inline-block;
+  text-align: right;
+}
+
+.todo-action .done {
+  padding-top: 15px;
+}
+
+.todo-edit {
+  width: 80% !important;
+}
+
+.material-icons {
+  color: rgba(0,0,0,0.8);
+  cursor:pointer;
+}
